@@ -1,41 +1,41 @@
 
-// /////////ПЕРЕБИРАЕМ ОБЬЕКТЫ//////Деструктуризация/////
+/////ПЕРЕБИРАЕМ ОБЬЕКТЫ//////Деструктуризация/////
 
-// const options = {
-//     name: 'test', 
-//     width: 1024,
-//     heignt: 1024,
-//     colors: {
-//         border: 'black',
-//         bg: 'red'
-//     },
-//     makeTest: function(){
-//         console.log('Test');
-//     }
-// };
-// options.makeTest();
-// const {border, bg} = options.colors;
-// console.log(border);
+const options = {
+    name: 'test', 
+    width: 1024,
+    heignt: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function(){
+        console.log('Test');
+    }
+};
+options.makeTest();
+const {border, bg} = options.colors;
+console.log(border);
 
-// console.log(Object.keys(options).length);/////длинна обекта, количество формируется в массив.
+console.log(Object.keys(options).length);/////длинна обекта, количество формируется в массив.
 
-// console.log(options.colors.bg);
-// delete options.name;
-// console.log(options);
+console.log(options.colors.bg);
+delete options.name;
+console.log(options);
 
-// let counter = 0;
+let counter = 0;
 
-// for (let key in options){
-//     if(typeof(options[key]) === 'object'){
-//         for (let i in options[key]){
-//             console.log(`Свойство ${i} имеет значение ${options[key][i]}`); 
+for (let key in options){
+    if(typeof(options[key]) === 'object'){
+        for (let i in options[key]){
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`); 
             
-//         }
-//     }else{
-//         console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//          counter++;
-//     }
-//     ////////////перебираем обьекты
-//     ////key-name--options[key]- test 
-// };
-// console.log(counter);
+        }
+    }else{
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+         counter++;
+    }
+    ////////////перебираем обьекты
+    ////key-name--options[key]- test 
+};
+console.log(counter);
