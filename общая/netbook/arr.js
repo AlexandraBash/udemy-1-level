@@ -47,6 +47,21 @@ console.log(result);// сумма всех чисел массива = 32
 const arr = ['apple', 'pear', 'plum'];
 const result = arr.reduce((sum, current) => `${sum}, ${current}`);
 console.log(result);
+///вариант 2
+function arrStr(par){
+    return par.reduce((prev, item) => { 
+     if(prev[item]) {
+       prev[item]++;
+     } else {
+       prev[item] = 1;
+     }
+     return prev;
+   }, {})
+ 
+ }
+ let arr = ['t-shirt', 'dress', 't-shirt', 'trousers', 't-shirt', 'dress'];
+ console.log(arrStr(arr));///{ 't-shirt': 3, dress: 2, trousers: 1 }
+
 
 //практика
  const obj = {
@@ -59,6 +74,16 @@ console.log(result);
  .filter(item => item[1] === 'persone')
  .map(item => item[0]);
  console.log(newArr);
+
+ ///new SET - найти уникальные значения
+
+let a = [1, 2, 3];
+let b = [5, 2, 1, 4];
+let c = [2, 1];
+let d = [6, 7, 8];
+let con = a.concat(b, c, d);///склеить массивы в один
+let result  = [...new Set(con)];///найти уникальные значения
+console.log(result);
 
 
 // ///////МЕТОДЫ МАССИВОВ////
@@ -75,3 +100,4 @@ console.log(result);
 // const str = ['z', 'f', 'h', 'j', 'l', 'a'];
 // str.sort();
 // console.log(str);/////////сортировка строк по алфавиту
+
