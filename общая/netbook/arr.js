@@ -19,6 +19,7 @@ for (let value of arr){
 arr.forEach(function(item, i, arr){
     console.log(`${i}: ${item} внутри массива ${arr}`)
 });
+
 ///4 вариант filter
  
 const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
@@ -83,7 +84,6 @@ let d = [6, 7, 8];
 let con = a.concat(b, c, d);///склеить массивы в один
 let result  = [...new Set(con)];///найти уникальные значения
 console.log(result);
-
 
 ///////МЕТОДЫ МАССИВОВ////
 
