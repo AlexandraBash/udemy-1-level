@@ -87,7 +87,7 @@ console.log(result);
 
 
 ///////МЕТОДЫ МАССИВОВ////
-//////////сортировка////
+
 
 const arr = [2, 3, 6, 8, 10];
 arr.sort(compareNum);
