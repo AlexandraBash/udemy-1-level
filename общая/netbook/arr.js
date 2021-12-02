@@ -19,7 +19,6 @@ for (let value of arr){
 arr.forEach(function(item, i, arr){
     console.log(`${i}: ${item} внутри массива ${arr}`)
 });
-
 ///4 вариант filter
  
 const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
